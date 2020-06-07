@@ -1,0 +1,61 @@
+body{
+  background: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.NameAnimation{
+  position: relative;
+  top: 100px;
+    
+}
+.NameAnimation h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  color: #f4f4f4;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
+
+.wavy {
+  position: relative;
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+.wavy span {
+  position: relative;
+    left: 20px;
+  display: inline-block;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+  animation: animate 1.5s ease-in-out infinite;
+  animation-delay: calc(.1s * var(--i))
+}
+@keyframes animate {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+}
